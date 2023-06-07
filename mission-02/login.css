@@ -52,3 +52,10 @@ body * {
 /* input 스타일 */
 
 /* 로그인 버튼 스타일 */
+.login__btn {
+  width: 50px;
+  height: 53px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #ED552F;
+}
