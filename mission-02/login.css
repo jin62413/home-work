@@ -1,0 +1,54 @@
+/* 숨김 콘텐츠 */
+.a11y {
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* 기본 스타일 설정 */
+body * {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+  font-size: 0.875rem;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* 컨테이너 크기 지정 */
+.login-form-container {
+  width: 244px;
+  height: 161px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ED552F 0%, #E8852E 100%);
+  padding: 12px;
+}
+
+/* 컨테이너 그림자 생성 */
+
+/* 로그인 제목 스타일 */
+.header {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #FFFF00;
+  margin-bottom: 8px;
+}
+
+/* 로그인 그룹 스타일 */
+.login-group {
+  width: 220px;
+  height: 106px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+}
+
+/* 레이블 스타일 */
+
+/* input 스타일 */
+
+/* 로그인 버튼 스타일 */
