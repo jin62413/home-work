@@ -93,8 +93,8 @@ fieldset {
 /* 로그인 버튼 스타일 */
 .login__btn {
   color: #FFFFFF;
-  width: 50px;
-  height: 53px;
+  width: 3.125rem;
+  height: 3.3125rem;
   border-style: none;
   border-radius: 5px;
   background-color: #ED552F;
@@ -105,23 +105,27 @@ fieldset {
 
 /* 멤버 서비스 스타일 */
 .member-service {
-  width: 204px;
+  width: 12.75rem;
   height: 36px;
+  padding: 4px 4px;
+  box-sizing: border-box;
 }
 
 .member__join {
   float: left;
-  line-height: 36px;
+  line-height: 28px;
 }
 
 .member__search {
   float: right;
-  line-height: 36px;
+  line-height: 28px;
 }
 
-.member-service span {
+.member-service a {
+  text-decoration: none;
+  color: inherit;
   font-size: 0.8125rem;
-  margin-left: 4px ;
+  margin-left: 4px;
 }
 
 /* 꺽쇠 디자인 */
