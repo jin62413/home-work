@@ -23,17 +23,91 @@ __HTML 구조__
 
 __CSS 코드__
 
-* box-shadow를 사용해 content-container에 그림자 생성
 * form 태그를 사용하여 로그인 기능 구현
+* box-shadow를 사용해 content-container에 그림자 생성
+  ```CSS
+  .content-container {
+    box-shadow: 4px 4px #a3a3a3;
+  }
+  ```
 * legend 태그의 내용은 숨김 처리
+  ```CSS
+  .a11y {
+    overflow: hidden;
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+  ```
 * fieldset 태그로 생기는 border 없애기
-* login-group 내의 input, button 요소는 position을 사용하여 정렬
+  ```CSS
+  fieldset {
+    border: 0;
+  }
+  ```
+* login-group 내의 button 요소는 position을 사용하여 정렬
+  ```CSS
+  .login-form-container {
+    position: relative;
+  }
+
+  .login__btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  ```
 * login-group에서 border-bottom으로 밑줄 효과 주기
+  ```CSS
+  .login-group {
+    border-bottom: 1px solid #CCCCCC;
+  }
+  ```
 * login-id-password-wrapping 내의 label과 input 요소도 position을 사용하여 정렬
+  ```CSS
+  .login-id-password-wrapping {
+    position: relative;
+  }
+
+  .login-id-password-wrapping label{
+    position: absolute;
+    left: 0;
+  }
+
+  .login-id-password-wrapping input {
+    position: absolute;
+    right: 0;
+  }
+  ```
 * member-service 내의 span 요소는 float를 사용하여 정렬
-* ::before를 사용해 span 앞쪽에 꺽쇠 삽입
-* 박스 위쪽과 오른쪽에 border를 주고 45도 회전시켜 꺽쇠 만들기
-<br><br>
+  ```CSS
+  .member__join {
+    float: left;
+    line-height: 28px;
+  }
+
+  .member__search {
+    float: right;
+    line-height: 28px;
+  }
+  ```
+* ::before를 사용해 span 앞쪽에 꺽쇠 삽입, 박스 위쪽과 오른쪽에 border를 주고 45도 회전시켜 꺽쇠 만들기
+  ```CSS
+  .member__join::before,
+  .member__search::before {
+    content: "";
+    border-top: 3px solid #ED552F;
+    border-right: 3px solid #ED552F;
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    transform: rotate(45deg);
+  }
+  ```
+<br>
 
 ## ✔ 아쉬운 점
 
