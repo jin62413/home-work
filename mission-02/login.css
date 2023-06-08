@@ -64,6 +64,7 @@ fieldset {
 /* 로그인 부분 스타일 */
 .login-id-password-wrapping {
   width: 9.125rem;
+  position: relative;
 }
 
 .login__id, .login__password {
@@ -73,18 +74,20 @@ fieldset {
 }
 
 .login-id-password-wrapping label{
-  float: left;
   line-height: 24px;
+  position: absolute;
+  left: 0;
 }
 
 .login-id-password-wrapping input {
   width: 5.625rem;
   height: 1.5rem;
-  float: right;
   border: 1px solid #CCCCCC;
   border-radius: 5px;
   padding-left: 7px;
   box-sizing: border-box;
+  position: absolute;
+  right: 0;
 }
 
 /* 로그인 버튼 스타일 */
@@ -104,7 +107,6 @@ fieldset {
 .member-service {
   width: 204px;
   height: 36px;
-  display: block;
 }
 
 .member__join {
