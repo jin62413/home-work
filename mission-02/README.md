@@ -11,7 +11,7 @@ position과 float를 활용하여 webCafe의 로그인 화면 구현
 ***
 __HTML 구조__
 
-<img src="./login_structure.jpg" width="380px" alt="structure image" />
+<img src="./login_structure.jpg" width="400px" alt="structure image" />
 
 * content-container로 모든 컨텐츠 감싸기
 * header로 제목 추가
