@@ -1,154 +1,141 @@
-.a11y,
-legend {
-  background: yellow;
-  position: absolute;
+/* 숨김 콘텐츠 */
+.a11y {
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
   width: 1px;
   height: 1px;
-  overflow: hidden;
-  clip-path: polygon(0 0, 0 0, 0 0);
+  margin: -1px;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1.15; /* 기본은 1인데 영어권에 적합, 한글쓰려면 좀 늘려주는 게 좋다 */
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+/* 기본 스타일 설정 */
+body * {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+  font-size: 0.875rem;
+  margin: 0px;
+  padding: 0px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-input, button, textarea, select, option {
-  font-size: 14px;
-}
-
-/* 메인 콘텐츠 */
-.main-content {
-  margin: 50px;
-  width: 300px;
-}
-
-.login {
-  background: radial-gradient(circle at right top, orange, tomato);
-  box-shadow: 5px 5px 0 #ccc;
-  padding: 15px;
+/* 컨텐츠 컨테이너 스타일 */
+.content-container {
+  width: 15.25rem;
+  height: 9.75rem;
   border-radius: 5px;
+  background: linear-gradient(90deg, #ED552F 0%, #E8852E 100%);
+  padding: 12px;
+  box-sizing: border-box;
+  box-shadow: 4px 4px #a3a3a3;
 }
 
-.login-title {
-  color: yellow;
-  font-size: 18px;
-  font-weight: 700;
-  text-indent: 1em; /* 바로 앞에서 선언한 18px로 설정 */
-}
-
-/* 로그인 폼, 로그인 멤버를 합쳐서 백그라운드 설정 */
-.login-form {
-  margin-top: 10px;
-  background: #fff;
-  padding: 10px 10px 0 10px;
-  border-radius: 5px 5px 0 0;
-}
-
-.login-form fieldset {
-  position: relative;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #aaa;
-}
-
-.user-email,
-.user-pw {
-  font-size: 0;
-}
-
-.user-pw {
-  margin-top: 5px;
-}
-
-.login-form label {
-  display: inline-block;
-  width: 60px;
-  font-size: 14px;
-}
-
-.login-form input {
-  border: 1px solid #aaa;
-  border-radius: 3px;
-  width: 120px;
-  height: 24px;
-  padding: 1px 1px 1px 5px;
-}
-
-.login-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-radius: 3px;
-  background: tomato;
-  color: #fff;
-  font-size: 14px;
-  padding: 0;
+fieldset {
   border: 0;
-  width: 50px;
-  height: 61px;
 }
 
-.login-member {
-  background: #fff;
-  padding: 4px;
-  border-radius: 0 0 5px 5px;
-  display: flow-root;
-  font-size: 14px;
+/* 로그인 제목 스타일 */
+.header {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #FFFF00;
+  margin-bottom: 8px;
 }
 
-.login-member li:first-child {
+/* 로그인 폼 스타일 */
+.login-form-container {
+  width: 13.75rem;
+  height: 6.625rem;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  padding: 8px 8px 0px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 로그인 부분 영역 지정 및 밑줄 생성 */
+.login-group {
+  width: 12.75rem;
+  height: 3.8125rem;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+/* 로그인 부분 스타일 */
+.login-id-password-wrapping {
+  width: 9.125rem;
+  position: relative;
+}
+
+.login__id, .login__password {
+  width: inherit;
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.login-id-password-wrapping label{
+  line-height: 24px;
+  position: absolute;
+  left: 0;
+}
+
+.login-id-password-wrapping input {
+  width: 5.625rem;
+  height: 1.5rem;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  padding-left: 7px;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+}
+
+/* 로그인 버튼 스타일 */
+.login__btn {
+  color: #FFFFFF;
+  width: 3.125rem;
+  height: 3.3125rem;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #ED552F;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+/* 멤버 서비스 스타일 */
+.member-service {
+  width: 12.75rem;
+  height: 36px;
+  padding: 4px 4px;
+  box-sizing: border-box;
+}
+
+.member__join {
   float: left;
+  line-height: 28px;
 }
 
-.login-member li:last-child {
+.member__search {
   float: right;
+  line-height: 28px;
 }
 
-.login-member a {
-  display: block;
-  padding: 6px;
+.member-service a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.8125rem;
+  margin-left: 4px;
+}
+
+/* 꺽쇠 디자인 */
+.member__join::before,
+.member__search::before {
+  content: "";
+  border-top: 3px solid #ED552F;
+  border-right: 3px solid #ED552F;
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  transform: rotate(45deg);
 }
