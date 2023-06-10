@@ -7,3 +7,80 @@ legend {
   overflow: hidden;
   clip-path: polygon(0 0, 0 0, 0 0);
 }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.15; /* 기본은 1인데 영어권에 적합, 한글쓰려면 좀 늘려주는 게 좋다 */
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 메인 콘텐츠 */
+.main-content {
+  margin: 50px;
+}
+
+.login {
+  background: radial-gradient(circle at right top, orange, tomato);
+  box-shadow: 5px 5px 0 #ccc;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.login-title {
+  color: yellow;
+  font-size: 18px;
+  font-weight: 700;
+  text-indent: 1em; /* 바로 앞에서 선언한 18px로 설정 */
+}
+
+/* 로그인 폼, 로그인 멤버를 합쳐서 백그라운드 설정 */
+.login-form {
+  margin-top: 10px;
+  background: #fff;
+  padding: 10px 10px 0 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.login-member {
+  background: #fff;
+  padding: 0 10px 10px 10px 10px;
+  border-radius: 0 0 5px 5px;
+}
