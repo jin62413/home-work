@@ -1,0 +1,51 @@
+/* 기본 설정 */
+body *{
+  font-family: "Pretendard Variable", Pretendard,
+   -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+   "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+   "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+   "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 0.875rem;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.new-content {
+  border: 2px solid navy;
+  width: 380px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "header header header header header more"
+  "preview-image preview-image title title title title"
+  "preview-image preview-image date date date date"
+  "preview-image preview-image content content content content"
+  ;
+}
+
+.header {
+  background: seagreen;
+  grid-area: header;
+}
+.more {
+  background: sandybrown;
+  grid-area: more;
+}
+.preview-image {
+  background: skyblue;
+  grid-area: preview-image;
+}
+.title {
+  background: lightcoral;
+  grid-area: title;
+}
+.date {
+  background: plum;
+  grid-area: date;
+}
+.content {
+  background: lemonchiffon;
+  grid-area: content;
+}
