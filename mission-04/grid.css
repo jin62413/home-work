@@ -1,51 +1,104 @@
 /* 기본 설정 */
+html {
+  margin-left: 10px;
+}
 body *{
   font-family: "Pretendard Variable", Pretendard,
    -apple-system, BlinkMacSystemFont, system-ui, Roboto,
    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
    "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-size: 0.875rem;
-  color: #000;
+  font-size: 0.875rem; /* 14px */
+  color: #181818;
   margin: 0;
   padding: 0;
 }
 
-.new-content {
-  border: 2px solid navy;
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.new-container {
+  /* gap: 12px; */
   width: 380px;
+  height: 200px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: 46px auto;
   grid-template-areas: 
-  "header header header header header more"
-  "preview-image preview-image title title title title"
-  "preview-image preview-image date date date date"
-  "preview-image preview-image content content content content"
-  ;
+  "heading heading heading heading heading more"
+  "main main main main main main"
 }
 
 .header {
-  background: seagreen;
-  grid-area: header;
+  grid-area: heading;
+  height: 46px;
+  color: #ED552F;
 }
+
+.header::after {
+  content: "";
+  display: block;
+  width: 80%;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(90deg, #A9A9A9 -1.32%, #FFFFFF 100%)1;
+}
+
 .more {
-  background: sandybrown;
   grid-area: more;
+  justify-self: end;
+  height: 46px;
 }
-.preview-image {
-  background: skyblue;
-  grid-area: preview-image;
+
+.main-group {
+  grid-area: main;
+  gap: 4px;
+  width: inherit;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 21px 21px auto;
+  grid-template-areas: 
+  "image image title title title title"
+  "image image date date date date"
+  "image image content content content content";
 }
-.title {
-  background: lightcoral;
+
+.main__img {
+  grid-area: image;
+  justify-self: center;
+}
+
+.main__img img {
+  width: 112px;
+  height: 66px;
+  box-shadow: 0 15px 15px 5px #AAAAAA;
+}
+
+.main__img figcaption {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.main__title, .main__date, .main__content {
+  margin-left: 6px;
+}
+
+.main__title {
   grid-area: title;
+  font-size: inherit;
+  font-weight: 700;
 }
-.date {
-  background: plum;
+
+.main__date {
   grid-area: date;
 }
-.content {
-  background: lemonchiffon;
+
+.main__content {
   grid-area: content;
+  margin-top: 8px;
+  line-height: 21px;
 }
