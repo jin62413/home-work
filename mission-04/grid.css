@@ -2,6 +2,7 @@
 html {
   margin-left: 10px;
 }
+
 body *{
   font-family: "Pretendard Variable", Pretendard,
    -apple-system, BlinkMacSystemFont, system-ui, Roboto,
@@ -20,85 +21,107 @@ a {
   display: block;
 }
 
+/* 컨테이너 grid 설정 */
 .new-container {
-  /* gap: 12px; */
-  width: 380px;
-  height: 200px;
+  gap: 12px;
+  width: 23.75rem;
+  height: 12.5rem;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 46px auto;
+  grid-template-rows: auto;
   grid-template-areas: 
   "heading heading heading heading heading more"
   "main main main main main main"
 }
 
+/* header 스타일 */
 .header {
   grid-area: heading;
-  height: 46px;
   color: #ED552F;
 }
 
+/* border 스타일 */
 .header::after {
   content: "";
   display: block;
   width: 80%;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
   border-bottom: 1px solid;
   border-image: linear-gradient(90deg, #A9A9A9 -1.32%, #FFFFFF 100%)1;
 }
 
+/* 더보기 스타일 */
 .more {
   grid-area: more;
   justify-self: end;
-  height: 46px;
+  position: relative;
 }
 
+/* 메인 콘텐츠 컨테이너 grid 설정 */
 .main-group {
   grid-area: main;
-  gap: 4px;
+  gap: 0.25rem;
   width: inherit;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 21px 21px auto;
+  grid-template-rows: 1.3125rem 1.3125rem auto;
   grid-template-areas: 
   "image image title title title title"
   "image image date date date date"
   "image image content content content content";
 }
 
+/* 이미지 스타일 */
 .main__img {
   grid-area: image;
   justify-self: center;
 }
 
 .main__img img {
-  width: 112px;
-  height: 66px;
+  width: 7rem;
+  height: 4.125rem;
   box-shadow: 0 15px 15px 5px #AAAAAA;
+  margin-left: -0.75rem;
 }
 
 .main__img figcaption {
   text-align: center;
-  margin-top: 14px;
+  margin-top: 0.875rem;
+  margin-left: -0.75rem;
 }
 
-.main__title, .main__date, .main__content {
-  margin-left: 6px;
-}
-
+/* 제목 스타일 */
 .main__title {
   grid-area: title;
   font-size: inherit;
   font-weight: 700;
 }
 
+/* 날짜 스타일 */
 .main__date {
   grid-area: date;
 }
 
+/* 내용 스타일 */
 .main__content {
   grid-area: content;
-  margin-top: 8px;
-  line-height: 21px;
+  margin-top: 0.5rem;
+  line-height: 150%;
+  text-align: justify;
+}
+
+/* 더하기 기호 만들기 */
+.more::before, .more::after {
+  position: absolute;
+  content: ' ';
+  left: -0.75rem; 
+  height: 1rem;
+  width: 0.25rem;
+  background-color: #447231;
+}
+
+.more::after {
+  transform: rotate(90deg);
+  top: 0;
 }
