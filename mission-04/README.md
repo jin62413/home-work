@@ -3,7 +3,7 @@ grid을 활용한 webCafe의 관련 사이트 section 구현
 <br><br>
 
 ## ✔ 완성된 UI
-![완성본](./grid_result.png "완성본 스크린샷")
+![완성본](./grid_result.PNG "완성본 스크린샷")
 <br><br>
 
 ## ✔ 설명
@@ -28,6 +28,7 @@ __CSS 코드__
   * 6column 사용
   * grid-template-areas로 위치 지정
   * heading은 h2, more은 더보기, main은 main-group을 뜻함
+  ![new-container 그리드](./container_grid.PNG "컨테이너 그리드")
   ```CSS
   .new-container {
     gap: 12px;
@@ -41,8 +42,6 @@ __CSS 코드__
     "main main main main main main"
   }
   ```
-  ![new-container 그리드](./container_grid.PNG "컨테이너 그리드")
-<br><br>
 * border 생성 및 스타일 지정
   * header::after를 사용
   * border-bottom으로 아랫쪽에 border 생성
@@ -85,10 +84,11 @@ __CSS 코드__
     top: 0;
   }
   ```
-  * main-group 스타일 지정
+* main-group 스타일 지정
   * grid를 사용하여 이미지와 본문의 레이아웃을 설정
   * 6column 사용
   * image는 figure, title은 h3, date는 time, content는 p를 뜻함
+  ![main-group 그리드](./main-group_grid.PNG "메인그룹 그리드")
   ```CSS
   .main-group {
     grid-area: main;
@@ -103,8 +103,6 @@ __CSS 코드__
     "image image content content content content";
   }
   ```
-  ![main-group 그리드](./main-group_grid.PNG "메인그룹 그리드")
-<br><br>
 * 이미지 스타일 지정
   * box-shadow를 사용해 이미지에 그림자 생성
   ```CSS
