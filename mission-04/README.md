@@ -27,8 +27,8 @@ __CSS 코드__
   * grid를 사용하여 header부분과 main-group의 레이아웃을 설정
   * 6column 사용
   * grid-template-areas로 위치 지정
-  * heading은 h2, more은 더보기, main은 main-group을 뜻함
-  ![new-container 그리드](./container_grid.PNG "컨테이너 그리드")
+  * heading은 h2, more은 더보기, main은 main-group을 뜻함<br>
+![new-container 그리드](./container_grid.PNG "컨테이너 그리드")
   ```CSS
   .new-container {
     gap: 12px;
@@ -87,7 +87,7 @@ __CSS 코드__
 * main-group 스타일 지정
   * grid를 사용하여 이미지와 본문의 레이아웃을 설정
   * 6column 사용
-  * image는 figure, title은 h3, date는 time, content는 p를 뜻함
+  * image는 figure, title은 h3, date는 time, content는 p를 뜻함<br>
   ![main-group 그리드](./main-group_grid.PNG "메인그룹 그리드")
   ```CSS
   .main-group {
