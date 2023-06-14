@@ -1,0 +1,96 @@
+/* 기본 스타일 */
+body {
+  font-family: "Pretendard Variable", Pretendard,
+   -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+   "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+   "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+   "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 0.875rem; /* 14px */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* section 스타일 */
+.favorite-container {
+  width: 11.875rem;
+  height: 9.1875rem;
+  background: linear-gradient(180deg, #CCCCCC, #EEEEEE);
+  border: 1px solid #A3A3A3;
+  border-radius: 5px;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+}
+
+/* h2 스타일 */
+.favorite-title {
+  font-size: 0.9375rem;
+  margin: 0 0 8px 0;
+}
+
+.favorite-title span {
+  color: #ED552F;
+}
+
+/* 리스트 스타일 */
+.favorite-rank {
+  font-size: 0.6875rem;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  counter-reset: rank;
+}
+
+.favorite-rank li {
+  position: relative;
+}
+ /* 리스트 마커 스타일 */
+.favorite-rank li::before{
+  counter-increment: rank;
+  content: counter(rank);
+  width: 1rem;
+  height: 1rem;
+  color: #fff;
+  background: #A3A3A3;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 16px;
+  position: absolute;
+}
+
+.favorite-rank a {
+  margin-left: 1.25rem;
+}
+
+/* sprite 이미지 지정 */
+.sprite {
+  background: url(./images/rank.png) no-repeat;
+}
+
+.spriteUp {
+  background-position: 100% 0;
+}
+
+.spriteNo {
+  background-position: 100% -21px;
+}
+
+.spriteDown {
+  background-position: 100% -43px;
+}
+
+/* 더보기 스타일 */
+.favorite-more {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+}
