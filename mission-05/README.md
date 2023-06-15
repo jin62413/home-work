@@ -1,4 +1,4 @@
-# 📰Mission - 05
+# 🖼Mission - 05
 grid을 활용한 webCafe의 관련 사이트 section 구현
 <br><br>
 
@@ -43,8 +43,12 @@ __CSS 코드__
   * space-between을 사용하여 리스트 간격을 동일하게 펼치기
   * conter의 이름을 rank로 설정, 초기값을 0으로 설정
   ```CSS
-  .favorite-title span {
-    color: #ED552F;
+  .favorite-rank {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    counter-reset: rank;
   }
   ```
 * li marker 스타일 변경
