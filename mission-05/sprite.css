@@ -50,10 +50,11 @@ a {
   counter-reset: rank;
 }
 
+/* 리스트 마커 스타일 */
 .favorite-rank li {
   position: relative;
 }
- /* 리스트 마커 스타일 */
+
 .favorite-rank li::before{
   counter-increment: rank;
   content: counter(rank);
@@ -81,11 +82,11 @@ a {
 }
 
 .spriteNo {
-  background-position: 100% -21px;
+  background-position: 100% -20.5px;
 }
 
 .spriteDown {
-  background-position: 100% -43px;
+  background-position: 100% -44px;
 }
 
 /* 더보기 스타일 */
@@ -93,4 +94,19 @@ a {
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
+}
+
+.favorite-more::before, 
+.favorite-more::after {
+  position: absolute;
+  content: ' ';
+  left: -0.75rem; 
+  height: 1rem;
+  width: 0.25rem;
+  background-color: #447231;
+}
+
+.favorite-more::after {
+  transform: rotate(90deg);
+  top: 0;
 }
